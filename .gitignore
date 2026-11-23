@@ -1,0 +1,10 @@
+*.tgz
+*.tar.gz
+spark-*
+kafka_*
+raw/
+curated/
+checkpoints/
+sample_data/
+.config/
+__pycache__/

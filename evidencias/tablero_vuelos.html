@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tablero de Operaciones Aéreas - Colombia</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; background: #f4f6f9; color: #333; }
+    .header { background: #1f4e79; color: white; padding: 20px; border-radius: 8px; }
+    .meta { font-size: 0.9em; color: #dbe9f4; margin-top: 8px; }
+    .kpi-box { background: white; padding: 15px 20px; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; }
+    img { max-width: 100%; height: auto; border-radius: 4px; }
+    footer { margin-top: 30px; font-size: 0.85em; color: #666; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Tablero Analítico: Operaciones Aéreas en Colombia</h1>
+    <div class="meta">
+      <strong>Fuente:</strong> Datos Abiertos Colombia (datos.gov.co - Aerocivil, API Socrata) |
+      <strong>Fecha de corte:</strong> 2026-11-23 21:56
+    </div>
+  </div>
+
+  <div class="kpi-box">
+    <strong>Total de pasajeros analizados en la muestra:</strong> 12,800,760
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>1. Top 10 Aerolíneas por Pasajeros</h2>
+      <img src="kpi_top10_aerolineas.png" alt="Top 10 Aerolíneas">
+    </div>
+    <div class="card">
+      <h2>2. Pasajeros por Año y Tipo de Tráfico</h2>
+      <img src="kpi_pasajeros_trafico_anio.png" alt="Pasajeros por Tráfico y Año">
+    </div>
+    <div class="card">
+      <h2>3. Top 10 Rutas por Pasajeros</h2>
+      <img src="kpi_top10_rutas.png" alt="Top 10 Rutas">
+    </div>
+  </div>
+
+  <footer>
+    Pipeline Big Data: Socrata API &rarr; Raw (JSONL) &rarr; Kafka &rarr; Spark Curated (Parquet) &rarr; SQLite &rarr; Tablero
+  </footer>
+</body>
+</html>
